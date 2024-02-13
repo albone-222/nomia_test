@@ -1,17 +1,6 @@
 version: "3"
 
 services:
-  db:
-    restart: always
-    image: postgres:16.1
-    volumes:
-      - db_data:/var/lib/postgresql/data
-    container_name: db
-    env_file:
-      - ./.env
-    expose:
-      - 5432
-
   django:
     build: 
       context: ./
@@ -26,12 +15,9 @@ services:
       - ./.env
     expose:
       - 8000
-    depends_on:
-      - db
     ports:
       - 8000:8000
   
 volumes:
-  db_data:
   static_volume:
   media_volume:

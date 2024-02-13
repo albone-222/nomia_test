@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-(-k_0usv9wi*u4*6g1(oj0qwd&yom1=!yj7g)hz0&o$e5c-rxj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = env.str('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = ['*']
 INTERNAL_IPS = ['127.0.0.1', 'localhost']
 
 
@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'nomia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-POSTGRES_DB = env.str('POSTGRES_DB', 'postgres')
-POSTGRES_USER = env.str('POSTGRES_USER', 'postgres')
-POSTGRES_PASSWORD = env.str('POSTGRES_PASSWORD', 'postgres')
+POSTGRES_DB = env.str('POSTGRES_DB')
+POSTGRES_USER = env.str('POSTGRES_USER')
+POSTGRES_PASSWORD = env.str('POSTGRES_PASSWORD')
 HOST=env.str('HOST', 'db:5432')
 DATABASES = {
         'default': dj_database_url.config(
