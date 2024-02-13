@@ -19,6 +19,7 @@ services:
     command: bash -c "python /code/manage.py migrate --noinput &&
              python /code/manage.py loaddata survey/fixtures/default.json &&
              python /code/manage.py collectstatic --noinput &&
+             python /code/manage.py createsuperuser --noinput &&
              gunicorn nomia.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - static_volume:/code/staticfiles
