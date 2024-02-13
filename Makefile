@@ -1,6 +1,6 @@
 DC = docker compose
-APP_DB_FILE = app_db.yml
-APP_FILE = app.yml
+APP_DB_FILE = app_db.yaml
+APP_FILE = app.yaml
 
 .PHONY: app-no-db
 app-no-db:
