@@ -3,7 +3,7 @@ from django.db import models
 
 class Survey(models.Model):
     name = models.CharField(max_length=200)
-    description = models.TextField(default='Test')
+    description = models.TextField()
     
     def __str__(self) -> str:
         return self.name
