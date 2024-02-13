@@ -1,0 +1,10 @@
+DEBUG=False
+ALLOWED_HOSTS=localhost,127.0.0.1,192.168.10.23
+SECRET_KEY='django-insecure-*2c4shu1+-g+riu7wlm+jb#frbr40u!l+ek6g%7c^wu!6d_(l='
+POSTGRES_DB=nomia
+POSTGRES_USER=nomia
+POSTGRES_PASSWORD=nomia-test
+DJANGO_SUPERUSER_USERNAME=nomia
+DJANGO_SUPERUSER_PASSWORD=nomia-test
+DJANGO_SUPERUSER_EMAIL=admin@admin.ru
+
