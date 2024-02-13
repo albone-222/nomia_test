@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title%}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto">
+    <div class="flex p-10 justify-center">
+        <h1 class="text-5xl text-zinc-100">{{ survey }} - результаты</h1>
+    </div>
+    <div class="pt-10 w-full lg:w-3/4 lg:mx-auto">
+        <div class="flex flex-col bg-zinc-300 p-5 my-7 rounded-3xl">
+            <h3 class="text-2xl pl-8 mx-auto">Результаты</h3>
+            <p class="p-3">Всего опрос прошло - {{ users_count }} человек</p>
+            <p class="p-3">Рейтинг вопросов:</p>
+            <ul>
+                {% for question in questions %}
+                <li class="px-5 py-1"><span class="italic font-bold">{{ question.number }} место</span> &nbsp&nbsp&nbsp "{{ question.text }}" - {{ question.question_count }} ответивших, что составляет {{ question.percent }}%</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="w-full lg:w-3/4 lg:mx-auto">
+        <div class="flex flex-col bg-zinc-300 p-5 my-7 rounded-3xl">
+            <h3 class="text-2xl pl-8 mx-auto">Статистика по ответам</h3>
+            <div class="flex flex-row flex-wrap pt-5 justify-around">
+                {% for question in questions %}
+                <div class="min-w-[33%] min-h-[100px] p-2">
+                    <p class="text-center">{{ question.text }}</p>
+                    {% for answer in answers %}
+                    {% if answer.question == question.id %}
+                    <p class="text-center">{{ answer.text|lower }} ответили {{ answer.answer_count }} - {{ answer.percent }}% опрошенных</p>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

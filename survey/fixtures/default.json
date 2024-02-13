@@ -1,0 +1,221 @@
+[
+{
+  "model": "survey.typequestion",
+  "pk": 1,
+  "fields": {
+    "type_question": "Выбор ответа, только один вариант"
+  }
+},
+{
+  "model": "survey.typequestion",
+  "pk": 2,
+  "fields": {
+    "type_question": "Свободный ввод числа"
+  }
+},
+{
+  "model": "survey.typequestion",
+  "pk": 3,
+  "fields": {
+    "type_question": "Свободный ввод текста"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 1,
+  "fields": {
+    "type_verification": "Равно"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 2,
+  "fields": {
+    "type_verification": "Не равно"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 3,
+  "fields": {
+    "type_verification": "Содержит"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 4,
+  "fields": {
+    "type_verification": "Не содержит"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 5,
+  "fields": {
+    "type_verification": "Больше или равно"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 6,
+  "fields": {
+    "type_verification": "Больше чем"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 7,
+  "fields": {
+    "type_verification": "Меньше или равно"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 8,
+  "fields": {
+    "type_verification": "Меньше чем"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 9,
+  "fields": {
+    "type_verification": "Между (включая левую и не включая правую)"
+  }
+},
+{
+  "model": "survey.typeverificationanswer",
+  "pk": 10,
+  "fields": {
+    "type_verification": "Не между (диапазон включает левую и не включает правую)"
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 2,
+  "fields": {
+    "type_question": 1,
+    "type_verification": 1
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 3,
+  "fields": {
+    "type_question": 1,
+    "type_verification": 2
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 8,
+  "fields": {
+    "type_question": 2,
+    "type_verification": 1
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 9,
+  "fields": {
+    "type_question": 2,
+    "type_verification": 2
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 10,
+  "fields": {
+    "type_question": 2,
+    "type_verification": 5
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 11,
+  "fields": {
+    "type_question": 2,
+    "type_verification": 6
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 12,
+  "fields": {
+    "type_question": 2,
+    "type_verification": 7
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 13,
+  "fields": {
+    "type_question": 2,
+    "type_verification": 8
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 14,
+  "fields": {
+    "type_question": 2,
+    "type_verification": 9
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 15,
+  "fields": {
+    "type_question": 2,
+    "type_verification": 10
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 16,
+  "fields": {
+    "type_question": 3,
+    "type_verification": 1
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 17,
+  "fields": {
+    "type_question": 3,
+    "type_verification": 2
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 18,
+  "fields": {
+    "type_question": 3,
+    "type_verification": 3
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 19,
+  "fields": {
+    "type_question": 3,
+    "type_verification": 4
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 20,
+  "fields": {
+    "type_question": 3,
+    "type_verification": 6
+  }
+},
+{
+  "model": "survey.verificationanswer",
+  "pk": 21,
+  "fields": {
+    "type_question": 3,
+    "type_verification": 8
+  }
+}
+]

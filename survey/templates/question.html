@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title%}{{ question.survey.name }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto">
+    <div class="flex p-10 justify-center">
+        <h1 class="text-5xl text-zinc-100">{{ question.survey.name }}</h1>
+    </div>
+    
+    <div class="pt-5 w-full lg:w-3/4 lg:mx-auto">
+        <div class="flex flex-col bg-zinc-300 p-5 my-4 rounded-3xl max-h-[1/2vh]">
+            <p class="text-wrap p-3 truncate mx-auto">{{ question.text|linebreaksbr }}</p>
+            <div class="flex">
+                {% if question.type_answer_id == 1 %}
+                <div class="flex flex-col w-full">
+                    <form action="{% url 'answer' question.survey.id question.id %}" method="get" class="flex flex-row">
+                        {% for answer in answers %}
+                        <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 w-full mx-3" type="submit" value="{{ answer.text }}" name="answer">
+                        {% endfor %}
+                    </form>
+                </div>
+                {% elif question.type_answer == 2 %}
+                <a href="{% url 'question' question.survey.id question.id %}">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-10 w-full">Пройти опрос</button>
+                </a>
+                {% else %}
+                <div class="flex flex-col w-full">
+                    <form action="{% url 'answer' question.survey.id question.id %}" method="get">
+                        <input class="w-full min-h-8 mt-6 text-center border-2 rounded-full border-gray-900" id="answer" name="answer" type="text">
+                        <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 w-full" type="Submit" value="Отправить">
+                    </form>
+                </div>
+                
+                {% endif %}
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "nomia-test"
+version = "0.1.0"
+description = "Тестовое задание для компании Nomia"
+authors = ["Kostiakov Aleksandr <79514164692@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11"
+django-environs = "^0.1.1"
+django = "^5.0.2"
+psycopg2-binary = "^2.9.9"
+
+
+[tool.poetry.group.dev.dependencies]
+django-debug-toolbar = "^4.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

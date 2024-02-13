@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title%}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto">
+    <div class="flex p-10 justify-center">
+        <h1 class="text-5xl text-zinc-100">Пройди опрос</h1>
+    </div>
+    
+    <div class="pt-10 w-full lg:w-3/4 lg:mx-auto">
+        {% for survey in surveys %}
+        <!-- {% if survey %} -->
+        <a href="{% url 'survey' survey.id %}" class="">
+            <div class="flex flex-col bg-zinc-300 p-5 my-7 rounded-3xl max-h-[250px]">
+                <h3 class="text-2xl pl-8">{{ survey.name }}</h3>
+                <p class="text-wrap p-3 truncate">{{ survey.description|linebreaksbr }}</p>
+            </div>
+            
+        </a>
+        <!-- {% endif %} -->
+        {% endfor %}
+    </div>
+    
+</div>
+{% endblock %}

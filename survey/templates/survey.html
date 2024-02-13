@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title%}{{ survey.name }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto">
+    <div class="flex p-10 justify-center">
+        <h1 class="text-5xl text-zinc-100">{{ survey.name }}</h1>
+    </div>
+    
+    <div class="pt-5 w-full lg:w-3/4 lg:mx-auto">
+        <div class="flex flex-col bg-zinc-300 p-5 my-4 rounded-3xl max-h-[1/2vh]">
+            <p class="text-wrap p-3 truncate">{{ survey.description|linebreaksbr }}</p>
+            <a href="{% url 'question' survey.id question.id %}">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-10 w-full">Пройти опрос</button>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
